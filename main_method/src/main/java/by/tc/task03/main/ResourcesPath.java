@@ -14,7 +14,7 @@ public class ResourcesPath {
     BufferedReader buffer = null;
 
     static {
-        resourceDatabasePath = "resource_path.txt";
+        resourceDatabasePath = "../resource_path.txt";
     }
 
     public String takePath(String typeOfFile) throws IOException{

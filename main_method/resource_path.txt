@@ -1,0 +1,1 @@
+xml=src/main/resources/task02.xml

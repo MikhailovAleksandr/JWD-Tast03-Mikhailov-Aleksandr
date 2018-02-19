@@ -17,7 +17,7 @@ class XMLDataParser {
         return instance;
     }
 
-    public List<String> parse(String dataPart) {
+    public List<String> parse(String dataPart) {// parse  - нестандартый для xml метод - мне из названия надо понить, что за лист стрингов я получу
 
         List<String> nodes = new ArrayList<>();
 

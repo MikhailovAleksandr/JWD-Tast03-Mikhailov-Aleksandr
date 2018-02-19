@@ -5,11 +5,12 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class ResourcesPath {
+public class ResourcesPath {// ну и зачем тут такая мутатень, тебя джарку попросили показать, как ее анализатор работает
+    // зачем вокруг простой задачи сооружать какофонию
 
     private static final String resourceDatabasePath;
 
-    FileInputStream fstream;
+    FileInputStream fstream;// атрибуты доступа где?
 
     BufferedReader buffer = null;
 

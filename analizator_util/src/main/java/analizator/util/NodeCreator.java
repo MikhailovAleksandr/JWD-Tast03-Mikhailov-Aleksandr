@@ -6,8 +6,10 @@ import java.util.regex.Pattern;
 public class NodeCreator {
 
     private final String searchRequest = "(<([^?!][^<>]+)/>)|(</([^<>]+)>)|(<([^?!][^<>]+)>)|([^<>]+)";
+    // code convention
 
     private Pattern searchPattern = Pattern.compile(searchRequest,Pattern.CASE_INSENSITIVE);
+    // searchPattern - что конкретно он будет искать
 
     private static final NodeCreator instance = new NodeCreator();
 
@@ -24,7 +26,7 @@ public class NodeCreator {
         Matcher matches = searchPattern.matcher(data);
 
         while(matches.find()) {
-            if (matches.group(5) != null) {
+            if (matches.group(5) != null) {// поля должны быть проименованы, почему кто-то должен тратить время, опереляя, что ты там выделяшь пятыми скобками
                 type = TypeOfNode.OPEN_TAG;
                 name = matches.group(6);
             } else if (matches.group(3) != null) {
